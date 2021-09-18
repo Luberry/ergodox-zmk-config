@@ -9,61 +9,61 @@ behaviors {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp1>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_1>;
 };
  wks2:workspace2 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp2>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_2>;
 };
  wks3:workspace3 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp3>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_3>;
 };
  wks4:workspace4 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp4>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_4>;
 };
  wks5:workspace5 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp5>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_5>;
 };
  wks6:workspace6 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp6>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_6>;
 };
  wks7:workspace7 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp7>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_7>;
 };
  wks8:workspace8 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp8>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_8>;
 };
  wks9:workspace9 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp9>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_9>;
 };
  wks0:workspace0 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp0>;
+  bindings = <&kp LEFT_WIN>, <&kp NUM_0>;
 };
 };
         keymap {
