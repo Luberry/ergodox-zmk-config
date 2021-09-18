@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: luberry
-      url-base: https://github.com/luberry
+    - name: slicemk
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
-      remote: luberry
-      revision: macros
+      remote: slicemk
+      revision: v20210704
       import: app/west.yml
   self:
     path: config

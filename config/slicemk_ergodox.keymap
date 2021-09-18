@@ -5,65 +5,23 @@
 
 / {
 behaviors {
- wks1:wks1 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_1>;
+ls:tap_layers{
+  compatible = "zmk,behavior-hold-tap";
+  label="tap_layers2";
+  tapping-term-ms = <150>;
+  #binding-cells = <2>;
+  quick_tap_ms = <0>;
+  flavor = "tap-preferred";
+  bindings = <&mo>,<&tog>;
 };
- wks2:wks2 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_2>;
-};
- wks3:wks3 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_3>;
-};
- wks4:wks4 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_4>;
-};
- wks5:wks5 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_5>;
-};
- wks6:wks6 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_6>;
-};
- wks7:wks7 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_7>;
-};
- wks8:wks8 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_8>;
-};
- wks9:wks9 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_9>;
-};
- wks0:wks0 {
-  compatible = "zmk,behaior-macro";
-  label = "workspace";
-  #binding-cells = <0>;
-  bindings = <&kp LEFT_WIN>, <&kp NUM_0>;
+lto:hold_layer{
+  compatible = "zmk,behavior-hold-tap";
+  label="hold_layer";
+  tapping-term-ms = <150>;
+  #binding-cells = <2>;
+  quick_tap_ms = <0>;
+  flavor = "tap-preferred";
+  bindings = <&tog>,<&kp>;
 };
 };
         keymap {
@@ -72,47 +30,76 @@ behaviors {
                 layer_0 {
                         bindings = <
     &bootloader
-    &kp F20    &wks1     &wks2     &wks3     &wks4     &wks5     &none                   &none       &wks6  &wks7              &wks8     &wks9     &wks0     &none
-    &kp ESC    &kp Q      &kp W      &kp E      &kp R      &kp T      &kp EQUAL               &kp RBKT    &kp Y   &kp U               &kp I      &kp O      &kp P      &kp LBKT
-    &kp TAB    &kp A      &kp S      &kp D      &kp F      &kp G                                          &kp H   &kp J               &kp K      &kp L      &kp SCLN   &kp SINGLE_QUOTE
-    &mo LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp BSLH                &kp MINUS   &kp N   &kp M               &kp CMMA   &kp DOT    &kp FSLH   &kp RSHFT
-    &kp LWIN   &kp LCTL   &kp LALT   &kp LEFT   &kp RIGHT                                                         &kp UARW            &kp RARW   &kp RALT   &none      &none
-                                                                      &mo 1 &mo 2 &sl 1  &sl 2
-                                                                                  &kp HOME    &kp PG_UP
-                                                       &kp BACKSPACE  &kp DEL                             &kp RET             &kp SPACE
-                                                                                  &kp END     &kp PG_DN
+    &kp F20    &kp F13     &kp F14    &kp F15    &kp F16    &kp F17    &none                           &none       &kp F18  &kp F19     &kp F21    &kp F22    &kp F23    &none
+    &kp ESC    &kp Q       &kp W      &kp E      &kp R      &kp T      &kp EQUAL                       &kp LBKT    &kp Y    &kp U       &kp I      &kp O      &kp P      &kp RBKT
+    &kp TAB    &kp A       &kp S      &kp D      &kp F      &kp G                                                  &kp H    &kp J       &kp K      &kp L      &kp SCLN   &kp SINGLE_QUOTE
+    &kp LSHFT  &kp Z       &kp X      &kp C      &kp V      &kp B      &kp BSLH                        &kp MINUS   &kp N    &kp M       &kp CMMA   &kp DOT    &kp FSLH   &kp RSHFT
+    &kp LWIN   &kp LCTRL   &kp LALT   &kp LEFT   &kp RIGHT                                                                  &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &kp RWIN
+                                                                       &sl 1     &sl 2       &ls 1 1   &ls 2 2
+                                                                                 &lto 3 HOME &kp PG_UP
+                                                            &kp BSPC   &kp DEL                         &kp RET     &kp SPACE
+                                                                                 &lto 4 END  &kp PG_DN
                         >;
                 };
 
                 layer_1 {
                         bindings = <
     &bootloader
-    &none          &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &none     &none      &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
-    &out OUT_USB   &kp EXCL   &kp AT     &kp RBRC   &kp LBRC   &kp PIPE   &none     &none      &kp UP     &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp ASTRK  &kp F12
-    &out OUT_BLE   &kp POUND  &kp DOLLAR &kp RPAR   &kp LPAR   &kp GRAVE                       &kp DOWN   &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp PLUS      
-    &bt BT_CLR     &kp PRCNT  &kp CARET  &kp RBKT   &kp LBKT   &kp TILDE  &none     &none      &kp AMPS   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp BACKSLASH      
-    &out OUT_TOG   &none      &none      &none      &none                                                 &none      &kp DOT    &kp NUM_0  &kp EQUAL      
-                                                           &none          &none     &none      &none
-                                                                          &none     &none
-                                                &none      &none                               &none      &none
-                                                                          &none     &none
+    &trans  &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &trans                      &trans   &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+    &trans  &kp EXCL   &kp AT     &kp LBRC   &kp RBRC   &kp PIPE   &trans                      &trans   &kp UP     &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp ASTRK  &kp F12
+    &trans  &kp POUND  &kp DOLLAR &kp LPAR   &kp RPAR   &kp GRAVE                                       &kp DOWN   &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp PLUS   &trans
+    &trans  &kp PRCNT  &kp CARET  &kp LBKT   &kp RBKT   &kp TILDE  &trans                      &trans   &kp AMPS   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp BSLH   &trans    
+    &trans  &trans     &trans     &trans     &trans                                                                &trans     &kp DOT    &kp NUM_0  &kp EQUAL  &trans
+                                                                   &trans &trans      &tog 1   &trans
+                                                                          &trans      &trans
+                                                        &trans     &trans                      &trans      &trans
+                                                                          &trans      &trans
                         >;
                 };
 
                 layer_2 {
                         bindings = <
     &bootloader
-    &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none        &none        &bt BT_SEL 0
-    &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &none        &none        &bt BT_SEL 1
-    &none      &none      &none      &none      &none      &none                            &none      &none      &none      &kp K_PP     &none        &bt BT_SEL 2
-    &none      &none      &none      &none      &none      &none      &none      &none      &none      &none      &kp F20    &kp K_PREV   &kp K_NEXT   &bt BT_SEL 3
-    &none      &none      &none      &none      &none                                                  &none      &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &bt BT_SEL 4
-                                                           &none      &none      &none      &none
-                                                                      &none      &none
-                                                &none      &none                            &none      &none
-                                                                      &none      &none
+    &trans         &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans  &trans   &trans      &trans      &trans       &bt BT_SEL 0
+    &out OUT_USB   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans  &trans   &trans      &trans      &trans       &bt BT_SEL 1
+    &out OUT_BLE   &trans   &trans   &trans   &trans   &trans                                       &trans  &trans   &trans      &kp K_PP    &trans       &bt BT_SEL 2
+    &bt BT_CLR     &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans  &trans   &kp F20    &kp K_PREV   &kp K_NEXT   &bt BT_SEL 3
+    &out OUT_TOG   &trans   &trans   &trans   &trans                                                        &trans   &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &bt BT_SEL 4
+                                                                &trans  &trans     &trans  &tog 2
+                                                                        &trans     &trans
+                                                       &trans   &trans                     &trans   &trans
+                                                                        &trans     &trans
                         >;
                 };
+                layer_3 {
+                        bindings = <
+    &bootloader
+    &kp F20    &kp F18    &kp F19    &kp F21    &kp F22    &kp F17    &none                           &none    &none   &none   &none   &none   &none   &none
+    &kp ESC    &kp Y      &kp U      &kp I      &kp O      &kp P      &trans                          &none    &none   &none   &none   &none   &none   &none
+    &kp SCLN   &kp H      &kp J      &kp K      &kp L      &kp SINGLE_QUOTE                                    &none   &none   &none   &none   &none   &none
+    &kp LSHFT  &kp N      &kp M      &kp CMMA   &kp DOT    &kp FSLH   &trans                          &none    &none   &none   &none   &none   &none   &none
+    &kp LWIN   &kp LCTRL  &kp LALT   &kp LEFT   &kp RIGHT                                                              &none   &none   &none   &none   &none
+                                                                      &sl 1      &sl 2          &none &none
+                                                                                 &lto 3 PG_UP   &none
+                                                          &kp RETURN  &kp SPACE                       &none    &none
+                                                                                 &lto 4 PG_DN   &none
+                        >;
+                };
+                layer_4 {
+                        bindings = <
+    &bootloader
+    &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12                         &none    &none   &none   &none   &none   &none   &none
+    &kp ESC    &kp UP     &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp ASTRK  &trans                          &none    &none   &none   &none   &none   &none   &none
+    &kp TAB    &kp DOWN   &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp PLUS                                            &none   &none   &none   &none   &none   &none
+    &kp LSHFT  &kp AMPS   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp BSLH   &trans                          &none    &none   &none   &none   &none   &none   &none
+    &kp LWIN   &kp LCTRL  &kp LALT   &kp DOT    &kp NUM_0                                                              &none   &none   &none   &none   &none
+                                                                      &sl 1      &sl 2          &none &none
+                                                                                 &lto 3 PG_UP   &none
+                                                          &kp RETURN  &kp SPACE                       &none    &none
+                                                                                 &lto 4 PG_DN   &none
+                        >;
+                };
+
 
         };
 };
