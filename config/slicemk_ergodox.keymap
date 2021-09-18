@@ -4,14 +4,14 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-behaviors {
-/* wks:workspace {
+/*behaviors {
+ wks:workspace {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <1>;
   bindings = <&kp LEFT_WIN>, <&kp>;
-};*/
-/*ls:tap_layers{
+};
+ls:tap_layers{
   compatible = "zmk,behavior-hold-tap";
   label="tap_layers"
   tapping-term-ms = <150>;
@@ -19,8 +19,8 @@ behaviors {
   quick_tap_ms = <0>;
   flavor = "tap-preferred";
   bindings = <&mo>,<&sl>;
-};*/
 };
+};*/
         keymap {
                 compatible = "zmk,keymap";
 
