@@ -5,61 +5,61 @@
 
 / {
 behaviors {
- wks1:workspace1 {
+ wks1:wks1 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_1>;
 };
- wks2:workspace2 {
+ wks2:wks2 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_2>;
 };
- wks3:workspace3 {
+ wks3:wks3 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_3>;
 };
- wks4:workspace4 {
+ wks4:wks4 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_4>;
 };
- wks5:workspace5 {
+ wks5:wks5 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_5>;
 };
- wks6:workspace6 {
+ wks6:wks6 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_6>;
 };
- wks7:workspace7 {
+ wks7:wks7 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_7>;
 };
- wks8:workspace8 {
+ wks8:wks8 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_8>;
 };
- wks9:workspace9 {
+ wks9:wks9 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
   bindings = <&kp LEFT_WIN>, <&kp NUM_9>;
 };
- wks0:workspace0 {
+ wks0:wks0 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <0>;
