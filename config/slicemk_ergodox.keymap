@@ -5,11 +5,65 @@
 
 / {
 behaviors {
- wks:workspace {
+ wks1:workspace1 {
   compatible = "zmk,behaior-macro";
   label = "workspace";
-  #binding-cells = <1>;
-  bindings = <&kp LEFT_WIN>, <&kp>;
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp1>;
+};
+ wks2:workspace2 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp2>;
+};
+ wks3:workspace3 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp3>;
+};
+ wks4:workspace4 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp4>;
+};
+ wks5:workspace5 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp5>;
+};
+ wks6:workspace6 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp6>;
+};
+ wks7:workspace7 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp7>;
+};
+ wks8:workspace8 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp8>;
+};
+ wks9:workspace9 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp9>;
+};
+ wks0:workspace0 {
+  compatible = "zmk,behaior-macro";
+  label = "workspace";
+  #binding-cells = <0>;
+  bindings = <&kp LEFT_WIN>, <&kp0>;
 };
 };
         keymap {
@@ -18,7 +72,7 @@ behaviors {
                 layer_0 {
                         bindings = <
     &bootloader
-    &kp F20    &wks 1     &wks 2     &wks 3     &wks 4     &wks 5     &none                   &none       &wks 6  &wks 7              &wks 8     &wks 9     &wks 0     &none
+    &kp F20    &wks1     &wks2     &wks3     &wks4     &wks5     &none                   &none       &wks6  &wks7              &wks8     &wks9     &wks0     &none
     &kp ESC    &kp Q      &kp W      &kp E      &kp R      &kp T      &kp EQUAL               &kp RBKT    &kp Y   &kp U               &kp I      &kp O      &kp P      &kp LBKT
     &kp TAB    &kp A      &kp S      &kp D      &kp F      &kp G                                          &kp H   &kp J               &kp K      &kp L      &kp SCLN   &kp SINGLE_QUOTE
     &mo LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp BSLH                &kp MINUS   &kp N   &kp M               &kp CMMA   &kp DOT    &kp FSLH   &kp RSHFT
