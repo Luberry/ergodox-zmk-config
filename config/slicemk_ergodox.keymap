@@ -4,13 +4,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-/*behaviors {
- wks:workspace {
+behaviors {
+/* wks:workspace {
   compatible = "zmk,behaior-macro";
   label = "workspace";
   #binding-cells = <1>;
   bindings = <&kp LEFT_WIN>, <&kp>;
-};
+};*/
 ls:tap_layers{
   compatible = "zmk,behavior-hold-tap";
   label="tap_layers"
@@ -20,7 +20,7 @@ ls:tap_layers{
   flavor = "tap-preferred";
   bindings = <&mo>,<&sl>;
 };
-};*/
+};
         keymap {
                 compatible = "zmk,keymap";
 
@@ -33,7 +33,7 @@ ls:tap_layers{
     &kp TAB    &kp A      &kp S      &kp D      &kp F      &kp G                                          &kp H   &kp J               &kp K      &kp L      &kp SCLN   &kp SINGLE_QUOTE
     &mo LSHFT  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp BSLH                &kp MINUS   &kp N   &kp M               &kp CMMA   &kp DOT    &kp FSLH   &kp RSHFT
     &kp LWIN   &kp LCTL   &kp LALT   &kp LEFT   &kp RIGHT                                                         &kp UARW            &kp RARW   &kp RALT   &none      &none
-                                                                      &mo 1  &mo 2 &sl 1 &sl 2 /*&ls layer_1 layer_1 &ls layer_2 layer_2*/
+                                                                      &sl 1  &sl 2 &ls 1 1 &ls 2 2
                                                                                   &kp HOME    &kp PG_UP
                                                        &kp BACKSPACE  &kp DEL                             &kp RET             &kp SPACE
                                                                                   &kp END     &kp PG_DN
