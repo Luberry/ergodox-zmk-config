@@ -24,7 +24,7 @@ ls:tap_layers{
 lto:hold_layer{
   compatible = "zmk,behavior-hold-tap";
   label="hold_layer";
-  tapping-term-ms = <150>;
+  tapping-term-ms = <500>;
   #binding-cells = <2>;
   quick_tap_ms = <0>;
   flavor = "tap-preferred";
