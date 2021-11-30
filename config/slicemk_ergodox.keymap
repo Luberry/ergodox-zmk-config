@@ -60,10 +60,10 @@ ls:tap_layers{
                         bindings = <
     &bootloader
     &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans     &trans       &trans       &trans       &trans
-    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &trans       &trans
-    &trans         &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                                               &trans  &trans     &trans       &kp K_PP     &trans       &trans
-    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans     &kp F20      &kp K_PREV   &kp K_NEXT   &trans
-    &trans         &trans   &trans         &trans         &trans                                                               &trans  &trans     &trans       &trans       &trans
+    &tog MEDIA         &tog MEDIA   &tog MEDIA         &tog MEDIA         &tog MEDIA          &tog MEDIA    &tog MEDIA                           &tog MEDIA    &tog MEDIA  &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &tog MEDIA       &tog MEDIA
+    &tog MEDIA         &tog MEDIA   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &tog MEDIA                                               &tog MEDIA  &tog MEDIA     &tog MEDIA       &kp K_PP     &tog MEDIA       &tog MEDIA
+    &tog MEDIA         &tog MEDIA   &tog MEDIA         &tog MEDIA         &tog MEDIA          &tog MEDIA    &tog MEDIA                           &tog MEDIA    &tog MEDIA  &kp F20    &kp K_PREV   &kp K_NEXT   &tog MEDIA       &mkp MCLK
+    &trans         &trans   &trans         &trans         &trans                                                                       &trans     &trans       &trans       &trans       &trans
                                                                                     &trans        &trans     &trans  &tog MEDIA
                                                                                                   &trans     &trans
                                                                           &mkp MCLK &mmv MOVE_UP                    &mkp LCLK &mkp RCLK
