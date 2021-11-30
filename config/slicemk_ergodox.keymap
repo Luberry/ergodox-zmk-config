@@ -2,8 +2,6 @@
 #define DEFAULT 0
 #define NUMPAD 1
 #define MEDIA 2
-#define MIRROR_DEFAULT 3
-#define MIRROR_NUMPAD  4
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -23,15 +21,6 @@ ls:tap_layers{
   flavor = "tap-preferred";
   bindings = <&mo>,<&tog>;
 };
-lto:hold_layer{
-  compatible = "zmk,behavior-hold-tap";
-  label="hold_layer";
-  tapping-term-ms = <500>;
-  #binding-cells = <2>;
-  quick_tap_ms = <0>;
-  flavor = "tap-preferred";
-  bindings = <&tog>,<&kp>;
-};
 };
 
         keymap {
@@ -46,9 +35,9 @@ lto:hold_layer{
     &kp LSHFT  &kp Z       &kp X      &kp C      &kp V      &kp B      &kp BSLH                                      &kp MINUS   &kp N    &kp M       &kp CMMA   &kp DOT    &kp FSLH   &kp RSHFT
     &kp LWIN   &kp LCTRL   &kp LALT   &kp LEFT   &kp RIGHT                                                                                &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT  &kp RWIN
                                                                        &sl NUMPAD &sl MEDIA                &ls 1 1   &ls 2 2
-                                                                                  HOME                     &kp PG_UP
+                                                                                  &kp HOME                     &kp PG_UP
                                                             &kp BSPC   &kp DEL                                       &kp RET     &kp SPACE
-                                                                                  END                      &kp PG_DN
+                                                                                  &kp END                      &kp PG_DN
                         >;
                 };
 
@@ -79,34 +68,6 @@ lto:hold_layer{
                                                                                                   &trans     &trans
                                                                           &mkp MCLK &mmv MOVE_UP                    &mkp LCLK &mkp RCLK
                                                                                                  &trans      &trans
-                        >;
-                };
-                mirror_default {
-                        bindings = <
-    &bootloader
-    &kp F20    &kp F18    &kp F19    &kp F21    &kp F22    &kp F17    &none                                        &none    &none   &none   &none   &none   &none   &none
-    &kp ESC    &kp Y      &kp U      &kp I      &kp O      &kp P      &trans                                       &none    &none   &none   &none   &none   &none   &none
-    &kp SCLN   &kp H      &kp J      &kp K      &kp L      &kp SINGLE_QUOTE                                                 &none   &none   &none   &none   &none   &none
-    &kp LSHFT  &kp N      &kp M      &kp CMMA   &kp DOT    &kp FSLH   &trans                                       &none    &none   &none   &none   &none   &none   &none
-    &kp LWIN   &kp LCTRL  &kp LALT   &kp LEFT   &kp RIGHT                                                                           &none   &none   &none   &none   &none
-                                                                      &trans     &trans                      &none &none
-                                                                                 &lto MIRROR_DEFAULT PG_UP   &none
-                                                          &kp RETURN  &kp SPACE                                    &none    &none
-                                                                                 &lto MIRROR_NUMPAD PG_DN    &none
-                        >;
-                };
-                mirror_numpad {
-                        bindings = <
-    &bootloader
-    &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12                                      &none    &none   &none   &none   &none   &none   &none
-    &kp ESC    &kp UP     &kp NUM_7  &kp NUM_8  &kp NUM_9  &kp ASTRK  &trans                                       &none    &none   &none   &none   &none   &none   &none
-    &kp TAB    &kp DOWN   &kp NUM_4  &kp NUM_5  &kp NUM_6  &kp PLUS                                                         &none   &none   &none   &none   &none   &none
-    &kp LSHFT  &kp AMPS   &kp NUM_1  &kp NUM_2  &kp NUM_3  &kp BSLH   &trans                                       &none    &none   &none   &none   &none   &none   &none
-    &kp LWIN   &kp LCTRL  &kp LALT   &kp DOT    &kp NUM_0                                                                           &none   &none   &none   &none   &none
-                                                                      &trans     &trans                      &none &none
-                                                                                 &lto MIRROR_DEFAULT PG_UP   &none
-                                                          &kp RETURN  &kp SPACE                                    &none    &none
-                                                                                 &lto MIRROR_NUMPAD PG_DN    &none
                         >;
                 };
 
