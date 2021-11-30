@@ -32,6 +32,8 @@ lto:hold_layer{
   bindings = <&tog>,<&kp>;
 };
 };
+
+&mmv {    time-to-max-speed-ms = <500>;};
         keymap {
                 compatible = "zmk,keymap";
 
@@ -68,14 +70,14 @@ lto:hold_layer{
                 media {
                         bindings = <
     &bootloader
-    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans   &trans      &trans      &trans       &trans
-    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans   &trans      &trans      &trans       &trans
-    &trans         &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                                               &trans  &trans   &trans      &kp K_PP    &trans       &trans
-    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans   &kp F20    &kp K_PREV   &kp K_NEXT   &trans
-    &trans         &trans   &trans         &trans         &trans                                                               &trans   &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &trans
+    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans     &trans       &trans       &trans       &trans
+    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans     &trans       &trans       &trans       &trans
+    &trans         &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                                               &trans  &trans     &trans       &kp K_PP     &trans       &trans
+    &trans         &trans   &trans         &trans         &trans          &trans    &trans                           &trans    &trans  &trans     &kp F20      &kp K_PREV   &kp K_NEXT   &trans
+    &trans         &trans   &trans         &trans         &trans                                                               &trans  &kp K_MUTE &kp K_VOL_DN &kp K_VOL_UP &trans
                                                                                     &trans        &trans     &trans  &tog MEDIA
                                                                                                   &trans     &trans
-                                                                          &mkp MCLK &mmv MOUSE_UP                    &mkp LCLK &mkp RCLK
+                                                                          &mkp MCLK &mmv MOVE_UP                    &mkp LCLK &mkp RCLK
                                                                                                  &trans      &trans
                         >;
                 };
