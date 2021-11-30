@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: luberry
-      revision: slice-mouse
+      revision: slice-mouse-hbsocd
       import: app/west.yml
   self:
     path: config
